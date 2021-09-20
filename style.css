@@ -3,27 +3,25 @@
     box-sizing: border-box;
     font-family: 'Kumbh Sans', sans-serif;
 }
-
 body{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color:hsl(185, 75%, 39%) ;
+    background-color:hsl(185, 75%, 39%);
     overflow: hidden;
-
 }
 body::before{
     content: "";
     background-image: url(images/bg-pattern-top.svg);
     width: 100%;
-    height: 50vh;
+    height: 100vh;
     position: absolute;
-    top:0;
-    left:-150px;
+    top:-400px;
+    left:-100px;
     background-repeat: no-repeat;
-    background-position:left;
+    background-position: left;
 }
 body::after{
     content: "";
@@ -37,7 +35,7 @@ body::after{
 }
 main{
     text-align: center;
-    width: 450px;
+    width: 430px;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
     border-radius: 15px;
     background-color: #fff;
@@ -45,7 +43,7 @@ main{
 }
 .image-profile{
     background-image: url(images/bg-pattern-card.svg);
-    height: 150px;
+    height: 160px;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
 }
@@ -59,16 +57,71 @@ img{
     display: flex;
     align-items: center;
     justify-content:center;
-    margin-bottom: -20px;
+    margin-bottom: -10px;
 }
-
+.profile-info{
+    padding-bottom: 30px;
+}
+h1{
+    color: hsl(229, 23%, 23%);
+}
+.profile p{
+    margin-left: 10px;
+    font-size: 22px;
+    color: hsl(227, 10%, 46%);
+}
+main span{
+    color: hsl(227, 10%, 46%);
+}
 .metrics{
-    border: 2px solid #f4f4f4;
+    border-top: 2px solid #f4f4f4;
     display: flex;
     justify-content: space-around;
     width: 100%;
+    padding-bottom: 10px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 10px;
+
+}
+.metrics h3{
+    color: hsl(229, 23%, 23%);
+    font-size: 20px;
+}
+.metrics p{
+    margin-top: -15px;
+    color: hsl(227, 10%, 46%);
 }
 
 .attribution{
     display:none;
+}
+
+@media(max-width: 600px){
+    body::before{
+        /* top:-500px;
+        left:-100px; */ top:0;
+        background-position: right;
+    }
+
+    body::after{
+        bottom:0;
+        /* left: 120px; */ 
+        left: 0;
+    }
+
+}
+
+@media(max-width: 500px){
+    main{
+        width: 350px;
+
+    }
+}
+
+@media(max-width: 400px){
+    main{
+        width: 300px;
+
+    }
 }
