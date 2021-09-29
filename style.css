@@ -18,20 +18,19 @@ body::before{
     width: 100%;
     height: 100vh;
     position: absolute;
-    top:-400px;
-    left:-100px;
-    background-repeat: no-repeat;
-    background-position: left;
+    bottom: 50%;
+    left: -50%; 
+    background-position: right;
 }
 body::after{
     content: "";
     background-image: url(images/bg-pattern-bottom.svg);
-    width: 100%;
-    height: 50vh;
     position: absolute;
-    bottom:-50px;
-    left: 950px;
     background-repeat: no-repeat;
+    height: 50%;
+    top: 55%;
+    left: 50%;
+    width: 50%;
 }
 main{
     text-align: center;
@@ -97,31 +96,20 @@ main span{
     display:none;
 }
 
-@media(max-width: 600px){
-    body::before{
-        /* top:-500px;
-        left:-100px; */ top:0;
-        background-position: right;
-    }
-
-    body::after{
-        bottom:0;
-        /* left: 120px; */ 
-        left: 0;
-    }
-
-}
 
 @media(max-width: 500px){
     main{
         width: 350px;
-
     }
+    body::after{
+        left: 35%;
+        width: 70%;
+}
 }
 
 @media(max-width: 400px){
     main{
         width: 300px;
-
     }
-}
+} 
+
